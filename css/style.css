@@ -1,0 +1,161 @@
+
+/* Modernized Beatles Fan Website CSS */
+
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Georgia,serif;
+    background:#efe7dc;
+    color:#4a3426;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:#7b1e24;text-decoration:none}
+a:hover{text-decoration:underline}
+#page{max-width:1100px;margin:0 auto;background:#fffdf9}
+#header{
+    background:#d8c5aa;
+    padding:20px;
+    text-align:center;
+}
+.logo img{max-width:180px;margin:auto}
+.navigation{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+.navigation ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    padding:0;
+    margin:0;
+}
+.navigation li.selected a{
+    font-weight:bold;
+    border-bottom:2px solid #7b1e24;
+}
+#body .header img{
+    width:100%;
+}
+.body h2,
+.content h2{
+    text-align:center;
+    color:#7b1e24;
+    margin:30px 0 20px;
+}
+.body ul{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    list-style:none;
+    padding:0 20px 30px;
+}
+.body li img{
+    border:4px solid #ddd;
+    transition:.3s;
+}
+.body li img:hover,
+.article img:hover{
+    transform:scale(1.03);
+}
+.footer{
+    display:flex;
+    gap:20px;
+    padding:30px;
+    flex-wrap:wrap;
+}
+.footer>div{
+    flex:1 1 300px;
+    background:#f6f1ea;
+    padding:20px;
+}
+.content{
+    padding:35px;
+}
+.content h3{
+    color:#7b1e24;
+    margin-top:25px;
+}
+.content p{
+    line-height:1.8;
+}
+.aside{
+    float:right;
+    margin-left:25px;
+    max-width:300px;
+}
+.article{
+    list-style:none;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    padding:0;
+}
+.article li{
+    border:1px solid #ddd;
+    padding:15px;
+    background:#faf7f3;
+}
+.article li>a{
+    display:block;
+    text-align:center;
+}
+.section{
+    width:68%;
+    float:left;
+    padding-right:30px;
+}
+.sidebar{
+    width:32%;
+    float:left;
+}
+.sidebar ul{
+    list-style:square;
+    padding-left:20px;
+}
+#footer{
+    clear:both;
+    background:#3d2b20;
+    color:#eee;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:20px;
+}
+#footer ul{
+    list-style:none;
+    display:flex;
+    gap:15px;
+    padding:0;
+    margin:0;
+}
+#footer a{
+    color:#fff;
+}
+#footer p{
+    margin:10px 0 0;
+}
+@media (max-width:768px){
+    .aside,.section,.sidebar{
+        float:none;
+        width:100%;
+        max-width:100%;
+        margin:0;
+        padding:0;
+    }
+    .footer{
+        flex-direction:column;
+    }
+    .navigation{
+        flex-direction:column;
+        gap:10px;
+    }
+    #footer{
+        flex-direction:column;
+        text-align:center;
+    }
+}
